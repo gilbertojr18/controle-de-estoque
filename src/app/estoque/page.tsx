@@ -26,6 +26,15 @@ export default function Page() {
   const [loading, setLoading] = useState(true);
   const [agulhas, setAgulhas] = useState<Agulha[]>([]);
 
+  function formatarMoeda(valor, moeda = 'BRL', locale = 'pt-BR') {
+  return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: moeda,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(valor);
+}
+
   useEffect(() => {
     async function fetchTecidos() {
       try {
@@ -98,7 +107,7 @@ export default function Page() {
 
               </td>
               <td className='border'>
-                {agulha.preco_unitario}
+                {formatarMoeda(agulha.preco_unitario)}
               </td>
               <td className='border'>
                 {new Date(agulha.data_cadastro).toLocaleDateString()}
@@ -157,7 +166,7 @@ export default function Page() {
                 {tecido.quantidade}
               </td>
               <td className='border'>
-                {tecido.preco_unitario}
+                {formatarMoeda(tecido.preco_unitario)}
               </td>
               <td className='border'>
                 {new Date(tecido.data_cadastro).toLocaleDateString()}
