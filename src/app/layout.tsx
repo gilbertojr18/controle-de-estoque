@@ -35,11 +35,7 @@ export default function RootLayout({
 
             <button className="bg-blend-luminosity p-3 ml-2 min-w-20 rounded-sm bg-amber-600   w-1/12 text-center "> <Link href={'/lacos'}> Laços </Link></button>
             <button className="bg-blend-luminosity p-3 ml-2 min-w-20  rounded-sm border-1  w-2.5/12  text-center whitespace-nowrap truncate"><Link href={'/estoque'}> Estoque de material</Link> </button>
-            <p className="ml-auto mr-auto text-center">
-              <h1 className="text-3xl ">{metadata.title}</h1> 
-              <h2>{metadata.description}</h2>           
-
-            </p>
+            
             <button className="bg-red-600 p-3  w-1/12 border-1 min-w-20  rounded-sm text-center ml-auto mr-1">Sair</button>
 
           </div>

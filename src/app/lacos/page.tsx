@@ -33,6 +33,8 @@ export default function Lacos(){
 
         <>
              <div className="p-4 bg-sky-800 w-full h-screen  flex flex-col justify-center align-middle">
+                <h1 className="text-5xl text-center font-sans">Laços:</h1>
+                <br />
                 <table className='bg-gray-700  text-semibold border p-3 h-auto'>
                     <thead className="border">
                         <th className="border">ID:</th>
